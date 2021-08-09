@@ -39,10 +39,7 @@ header nav ul{
 header nav li{
     list-style: none;
     margin: 0 1em;
-}
-header nav li:hover{
-    transform: scale(1.05);
-    transition:.2s ease-in;
+    padding-bottom: .4em;
 }
 header nav li:hover{
     transform: scale(1.05);
@@ -288,6 +285,7 @@ footer{
     width: 30px;
 }
 
+
 /* Media queries */
 @media screen and (max-width: 1024px) {
     .feature{
@@ -325,7 +323,7 @@ footer{
     body{
         font-size: 18px;
     }
-    h1{
+    .showcase-img h1{
         font-size: 1.7em;
     }
     .feature-container{
@@ -451,6 +449,6 @@ footer{
         font-size: 1.4em;
     }
     .main>.main-container{
-        width: 94%;
+        width: 92%;
     }
 }
