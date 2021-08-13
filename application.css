@@ -452,3 +452,19 @@ footer{
         width: 92%;
     }
 }
+
+/* Small Screen */
+@media screen and (max-width: 370px){
+    header nav{
+        width: 100%;
+    }
+    header .logo{
+        position: absolute;
+    }
+    #logo .mobile{
+        display: none;
+    }
+    header nav ul{
+        justify-content: space-between;
+    }
+}
