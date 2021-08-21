@@ -133,13 +133,14 @@ main{
 .call-to-action{
     font-size: 1.3em;
     display: block;
+    text-align: center;
     width: 360px;
     margin: auto;
     background-color: #6A7B8B;
     text-decoration: none;
     color: #fff;
-    padding: 1em 0;
-    margin-top: 4em;
+    padding: .8em 0;
+    margin-top: 3em;
     font-weight: 700;
     border-radius: 10px;
     box-shadow: 2px 2px 3px #5c6670;
@@ -243,15 +244,140 @@ main{
 .main{
     line-height: 1.5em;
 }
-.main h1{
+.main h2{
+    font-size: 2em;
     text-align: center;
     font-weight: 500;
+    margin: 1.5em 0;
+}
+.modal{
+    padding: 5em;
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    top:5%;
+    z-index: 9;
+    background-color: #fff;
+    box-shadow: 8px 8px 15px rgba(0,0,0,0.4);
+
+    display: none;
+}
+.modal-flex{
+    display: flex;
+}
+.modal-logo{
+    padding-right: 3%;
+    margin-right: 3%;
+    width: 19%;
+    align-self: flex-start;
+}
+.modal .modal-logo img{
+    width: 90px;
+}
+.modal-msg{
+    text-align: center;
+    padding-right: 19%;
+}
+.modal-msg h3{
+    font-size: 2.5em;
+}
+.modal-msg p{
+    margin: 1em 0;
+}
+.modal-msg .p1{
+    font-weight: 900;
+    font-size: 2em;
+}
+.modal-msg .p2{
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: left;
+}
+.modal-msg>button{
+    outline: none;
+    border: none;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: #6A7B8B;
+    color: #fff;
+    padding: .6em 2.5em;
+    margin-top: 2em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #5c6670;
+}
+.modal-msg>button:hover{
+    color:#6A7B8B;
+    background-color: #fff;
+    cursor: pointer;
+}
+.modal-active{
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+.modal-active-form{
+    pointer-events: none;
+}
+.form div{
+    position: relative;
+    margin-bottom: .4em;
+    padding-bottom: 1.2em;
+}
+.form i{
+    position: absolute;
+    top: 2.2em;
+    right: 1em;
+    visibility: hidden;
+}
+.form small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transform: translate();
+
+}
+.form div>label{
+    font-size: 1.3em;
+}
+.form input, .form textarea{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 2px solid #c4cad0;
+    background-color: #C4CAD0;
+    padding: 0 .4em;
+    font-size: 1.1em;
+}
+.form input{
+    height: 2em;
+}
+.form .success input{
+    border-color: #2ecc71;
+}
+.form .success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+.form .err input{
+    border-color: #e74c3c;
+}
+.form .err i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+.form .err small{
+    visibility: visible;
+    color: #e74c3c;
 }
 .address, .contact{
     margin: 2em 0;
 }
-.main>.main-container{
-    width: 60%;
+.main .main-container{
+    width: 55%;
 }
 .map-img{
     padding-bottom: 3em;
@@ -285,7 +411,6 @@ footer{
     width: 30px;
 }
 
-
 /* Media queries */
 @media screen and (max-width: 1024px) {
     .feature{
@@ -311,6 +436,45 @@ footer{
     }
     .para2-left{
         padding-left: 2em;
+    }
+
+    /* Contact */
+    
+    .modal{
+        padding: .4em;
+    }
+    .modal-logo{
+        display: none;
+    }
+    .modal-msg{
+        padding:0;
+    }
+    .modal-msg h3{
+        font-size: 1.5em;
+    }
+    .modal-msg p{
+        margin: .2em 0;
+    }
+    .modal-msg .p1{
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+    .modal-msg .p2{
+        font-weight: 300;
+        font-size: 1em;
+        text-align: center;
+    }
+    .modal-msg>button{
+        font-size: 1em;
+        padding: .4em 2.5em;
+        margin-top: 2em;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px #5c6670;
+    }
+    .modal-msg>button:hover{
+        color:#6A7B8B;
+        background-color: #fff;
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 768px) {
@@ -450,6 +614,13 @@ footer{
     }
     .main>.main-container{
         width: 92%;
+    }
+    .modal{
+        width: 90%;
+        height: 50%;
+        top:25%;
+        z-index: 9;
+        background-color: #fff;
     }
 }
 
